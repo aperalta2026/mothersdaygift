@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <title>gift</title>
+    <link rel = "icon" href = "https://i.imgur.com/gYAGSdm.png" type = "image/x-icon">
+    <style>
+        body {
+            font-family: 'Fragment Mono', monospace;
+            background-image:url(https://i.imgur.com/zUwrwxw.png);
+            background-size: cover;
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .johncena {
+            color: transparent;
+            font-size: 2px;
+        }
+        .head {
+            color: grey;
+        }
+        .link {
+            padding: 5px 5px 5px 5px;
+            background-color: transparent;
+            border-radius: 20px;
+            color: grey;
+            font-size: 10px;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+            font-size: 15px;
+        }
+        .link:hover {
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+        }
+        .link:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: rgb(255, 166, 0);
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out;
+        }
+        .link:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .img-fluid {
+            max-height: 100px;
+            max-width: 100px;
+        }
+        .truesfriends {
+            height: 40px;
+            width: 40px;
+        }
+        .iconbar {
+            padding-top: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .atruetruefriend {
+            height: 720px;
+            margin-top: 70px;
+            padding:0%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            background-image: url(https://i.imgur.com/WZSLRDt.png);
+            background-size: cover;
+            border-radius: 10px;
+        }
+        .helpsafriendinneed {
+            height: 470px;
+            margin-top: 40px;
+            padding:0%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            background-image: url(https://i.imgur.com/VxwRwiY.png);
+            background-size: cover;
+            border-width: 2px;
+            border-color: #DEDEDE;
+            border-style: solid;
+            border-radius: 5px;
+            width: 450px;
+        }
+        .headpt2idkanymore {
+            background-color: #ffffff;
+            color:#1c1c1c;
+            border-radius: 10px;
+            padding:5px 5px 5px 5px;
+        }
+        .headpt3idkanymore {
+            background-color: #ffffff;
+            color:#1c1c1c;
+            border-radius: 10px;
+            padding:5px 5px 5px 5px;
+        }
+        .btn-group {
+            height: 30px;
+        }
+        .btn-idkwhatthisis {
+            height: 30px;
+            width: 40px;
+            background-color: white;
+            border-color: grey;
+        }
+        .btn-idkwhatthisis:hover {
+            background-color: #e8c1ca;
+            border-color: white;
+            color: grey
+        }
+        .btnnanasatab1 {
+            background-color: white;
+            border-color: #d9d9d9;
+            color: #d9d9d9;
+            border-radius: 50%;
+        }
+        .btnnanasatab2 {
+            background-color: white;
+            border-color: #d9d9d9;
+            color: #292828;
+            border-radius: 50%;
+        }
+        .btnnanasatab3 {
+            background-color: white;
+            border-color: #d9d9d9;
+            color: #827f7f;
+            border-radius: 50%;
+        }
+        .btnnanasatab4 {
+            width: 77%;
+            background-color: white;
+            border-color: #d9d9d9;
+            color: #827f7f;
+            border-radius: 20px;
+            padding-left: 10px;
+            align-items:start;
+        }
+        .material-symbols-outlined {
+            font-size: 15px;
+        }
+        .nav-tabs {
+            padding-left: 5px;
+        }
+        .nav-item {
+            transition: 0.3s;
+            font-size:15px;
+            border-radius:7px;
+            -ms-transform: skewX(-9deg);
+            -webkit-transform: skewX(-9deg);
+            transform: skewX(-9deg);
+        }
+        .nav-item-content {
+            color:#343737 !important;
+            -ms-transform: skewX(9deg);
+            -webkit-transform: skewX(9deg);
+            transform: skewX(9deg);  
+            display: inline-block;
+        }
+        .nav-item:hover {
+            font-size: 17px;
+            background-color: #e8c1ca;
+            color:#343737 !important;
+        }
+        .tab-content {
+            background-color: white;
+            height: 520px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .tab-content-2 {
+            background-color: white;
+            height: 350px;
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            width: 435px;
+        }
+        .yeet {
+            color: white;
+        }
+        .searchbarthingy {
+            background-color: white;
+            padding-top:10px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+        }
+        .sohelpmegod {
+            border-color: #d8d8d8; 
+            border-width: 2px; 
+            border-style:solid; 
+
+            border-radius: 10px;
+            padding: 5px 5px 5px 5px;
+        }
+        .sohelpmegod::-webkit-scrollbar {
+            width: 13px;
+        }
+        .sohelpmegod::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px #d8d8d8; 
+            border-radius: 10px;
+        }
+        .sohelpmegod::-webkit-scrollbar-thumb {
+            background: #e8c1ca; 
+            border-radius: 5px;
+            box-shadow: 10px 10px 20px #d8d8d8 inset;
+        }
+        .sohelpmegod::-webkit-scrollbar-thumb:hover {
+            background: #f2d6d5; 
+        }
+        .lawrd {
+            display: block;
+            overflow: hidden;
+            padding: 0px 4px 0px 6px;
+            width: 100%;
+        }
+        .form-check {
+            width: 600px;
+        }
+        label {
+            float: left;
+            color:#343737;
+            padding: 10px 10px 10px 10px;
+        }
+        .theformbro {
+            background-image: url(https://i.imgur.com/FZkmCtF.png);
+            background-size: cover;
+            border-color:#d8d8d8;
+            border-style: solid;
+            border-width: 3px;
+            border-radius: 10px;
+            padding-top: 10px;
+            padding-left: 40px;
+            margin-bottom: 10px;
+        }
+        .theformbro2 {
+            padding-top: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .btn-add {
+            background-color: #e8c1ca;
+            border-color:#d8d8d8;
+            border-style: dotted;
+            border-width: 3px;
+            border-radius: 10px;
+            color:#292828;
+            padding: 3px 3px 3px 3px;
+            width: 100px;
+            height: 40px;
+        }
+        .list-group {
+            padding-left: 3px;
+            width: 30%;
+        }
+        .idkanymore {
+            float: left;
+            border-radius: 50px;
+            background-image: url(https://i.imgur.com/FZkmCtF.png);
+            border-color:#d8d8d8;
+            border-style: solid;
+            border-width: 2px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .helpmepls {
+            display: block;
+            overflow: hidden;
+            padding: 0px 4px 0px 6px;
+            width: 480px;
+            border-radius: 20px;
+            margin-left: 10px;
+        }
+        #friendList {
+            font-size: 15px;
+            background-image: url(https://i.imgur.com/FZkmCtF.png);
+            border-color:#d8d8d8;
+            border-style: solid;
+            border-width: 2px;
+            height: 470px;
+        }
+        .idklist {
+            background-color: #f7f4ce;
+            border-radius: 10px;
+            border-style: solid;
+            border-color:#ffffff;
+            border-width: 1px;
+            list-style-type: none;
+            margin-bottom: 5px;
+            padding: 5px 5px 5px 5px;
+            margin-top: 5px;
+            margin-right: 3px;
+            text-decoration: none;
+            display: inline-block;
+            position: relative;
+        }
+        .idklist:hover {
+            background-color: white;
+            color: #fddb75;
+        }
+        .idklist:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #fddb75;
+            transform-origin: bottom right;
+            transition: transform 0.5s ease-out;
+        }
+        .idklist:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        .imgg {
+            width: 380px;
+            margin-top: 2px;
+            border-radius: 10px;
+        }
+        .imggg {
+            width: 380px;
+            margin-top: 2px;
+            border-radius: 10px;
+        }
+        .imggg:hover{
+            border: 5px solid rgb(255, 222, 137);
+        }
+    </style>
+</head>
+<body onload="displayList()">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="iconbar align-items-center">
+                    
+                    <a class="link" href="https://www.youtube.com/watch?v=oqlSmcJ0xEM"><img src="https://i.imgur.com/d3d0fLg.png" class="cutiemark img-fluid" alt="lexcutiemark"></a><h6 class="link">♡</h6>
+                    <br>
+                    <span class="johncena">hey</span>
+                    <br>
+                    <a class="link" href="https://www.youtube.com/watch?v=dg4dmNvxdu0"><img src="https://i.imgur.com/tfegI5H.png" class="cutiemark img-fluid" alt="avacutiemark"></a><h6 class="link">♡</h6>
+                    <br>
+                    <span class="johncena">hey</span>
+                    <br>
+                    <a class="link" href="https://www.youtube.com/watch?v=Y9-MLgHxQGs"><img src="https://i.imgur.com/J44RQ3G.png" class="cutiemark img-fluid" alt="ayahcutiemark"></a><h6 class="link">♡</h6>
+                    <br>
+                    <span class="johncena">hey</span>
+                    <br>
+                    <a class="link" href="https://www.youtube.com/watch?v=wz_AiUkdJps"><img src="https://i.imgur.com/GSb4DqY.png" class="cutiemark img-fluid" alt="logo"></a><h6 class="link">♡</h6>
+                </div>
+            </div>
+            <div class="col-sm-1">
+                <span class="johncena">atruetruefriend</span>
+            </div>
+            <div class="col-sm-8 atruetruefriend">
+                <div style="width: 86%; padding-left:20px; padding-top:10px; height:30px;">
+                    <span class="headpt2idkanymore">♡</span>
+                </div>
+                <div>
+                    <span class="johncena">sobs cries</span>
+                </div>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <button type="button" class="btn btn-idkwhatthisis">
+                        <span class="material-symbols-outlined">remove</span>
+                    </button>
+                    <button type="button" class="btn btn-idkwhatthisis">
+                        <span class="material-symbols-outlined">fullscreen</span>
+                    </button>
+                    <button type="button" class="btn btn-idkwhatthisis">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <div style="width: 100%; margin-top:20px; padding-left:5px; padding-right:5px;">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="johncena">,,,,,</li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="friends-tab" data-bs-toggle="tab" data-bs-target="#friends" type="button" role="tab" aria-controls="friends" aria-selected="true" style="background-color: white;"><span class="nav-item-content"><i>note</i></span></button>
+                        </li>
+                        <li class="johncena">,,,,,</li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="addcontact-tab" data-bs-toggle="tab" data-bs-target="#addcontact" type="button" role="tab" aria-controls="addcontact" aria-selected="false" style="background-color: white;"><span class="nav-item-content"><i>gallery</i></span></button>
+                        </li>
+                        <li class="johncena">,,,,,</li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="bomnk-tab" data-bs-toggle="tab" data-bs-target="#bomnk" type="button" role="tab" aria-controls="bomnk" aria-selected="false" style="background-color: white;"><span class="nav-item-content"><i>bonus</i></span></button>
+                        </li>
+                    </ul>
+                    <div class="searchbarthingy">
+                        <button type="button" class="btn btnnanasatab1"><span class="material-symbols-outlined">arrow_back</span></button>
+                        <button type="button" class="btn btnnanasatab2"><span class="material-symbols-outlined">arrow_forward</span></button>
+                        <button type="button" class="btn btnnanasatab3"><span class="material-symbols-rounded" style="font-size: 15px;">home</span></button>
+                        <button type="button" class="btn btnnanasatab2"><span class="material-symbols-outlined">undo</span></button>
+                        <button type="button" class="btn btnnanasatab4">happy mothers' day, mom ♡</button>
+                        <button type="button" class="btn btnnanasatab2"><span class="material-symbols-outlined">search</span></button>
+                        <hr>
+                    </div>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="friends" role="tabpanel" aria-labelledby="friends-tab">
+                            <div class="sohelpmegod" style="width:1200px; height:500px; overflow:auto;">
+                                <h5>to my favorite mom: <br><br></h5>
+                                <h2 style="color: #ffc30e;">HAPPY MOTHERS' DAY !!! :D</h2><br>
+                                <h4>WOW MY MOTHER SO GANDA TALAGA SO STRONG SO RESILIENT SO PERSEVERE SO HARDWORKING SO PRETTY SO GANDA SO BEAUTIFUL AND MAGANDA ALWAYS I LOVE HER SO MUCH TALAGA SOBRA SHES SO FUNNY AND AMAZING AND HER COOKING IS SO GOOD LEGIT SHE LOVES US SO MUCH AND IT SHOWS THROUGH ALL HER WORDS AND ACTIONS WE LOVE HER SO MUCH TALAGA SHES THE BEST TALAGA MWAMWAMWA MY MOTHER!!!!!!!!!!!!!!!!!!!!!<br><br>
+                                thank you for feeding me, dressing me, combing my hair, telling me stories, laughing with (and at) me, buying me toys, teaching me what you know, raising me, scolding me, hugging me, loving me, and so, so, so much more.<br><br>i'm sorry if i don't listen to u sometimes &#128549; i promise i only do it to mess wif u<br><br>but seriously, i'm sorry for all the times i've made you upset. i never mean to add another burden onto your shoulders. i promise i'll do my best to do what i can to make things easier for you to handle.<br><br>genuinely, sincerely, thank you so much for everything you have done for us. i know you say that dad works the hardest in our family, but with a house to keep clean, a job that quite literally does not let you sleep, and <strong>10</strong> mouths to feed, i'd say you work just as hard, if not harder. we're really really really grateful to have you as our mom. there's no one else out there who can compare. <br><br>from the bottom of our hearts, thank you, thank you, thank you. <br>we love you to pluto and back ♡ </h4>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="addcontact" role="tabpanel" aria-labelledby="addcontact-tab">
+                            <div class="sohelpmegod" style="width:1200px; height:500px; overflow:auto; overflow-x: hidden;">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106842658170748988/IMG_1915.jpg?width=874&height=655" style="margin-bottom: 10px;" alt="1">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106841159625609276/IMG20180126112656.jpg?width=469&height=655" style="margin-bottom: 10px;" alt="1">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106841779795398766/IMG_2176.jpg?width=492&height=655" style="margin-bottom: 10px;" alt="1">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106842495419170916/IMG_3813.jpg?width=492&height=655" style="margin-bottom: 10px;" alt="1">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106881772278513784/IMG_1167.jpg?width=492&height=655" style="margin-bottom: 10px;" alt="1">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106881773700403320/IMG_3245.jpg?width=873&height=655" style="margin-bottom: 10px;" alt="1">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106884916047777853/A676C1F7-AF2D-474C-A3A4-70B1033B06D9.jpg?width=492&height=655" style="margin-bottom: 10px;" alt="1">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106881772853137418/IMG_1696.jpg?width=492&height=655" style="margin-bottom: 10px;" alt="1">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106881771938779207/61cc937e25685940e6037ee5469771a370d4f36bac851c12ebf5163e21df9f4602.jpg?width=492&height=655" style="margin-bottom: 10px;" alt="1">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106881771460644864/IMG_3635.jpg?width=492&height=655" style="margin-bottom: 10px;" alt="1">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106881772572135495/IMG_0309.jpg?width=873&height=655" style="margin-bottom: 10px;" alt="1">
+                                        <img class="imgg" src="https://media.discordapp.net/attachments/1028259896547868783/1106885504361828382/94A67613-7030-4A4F-9F90-3B80ED48CDD8.jpg?width=492&height=655" style="margin-bottom: 10px;" alt="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="bomnk" role="tabpanel" aria-labelledby="bomnk-tab">
+                            <div class="sohelpmegod" style="width:1200px; height:500px; overflow:auto; overflow-x: hidden;">
+                                <div class="row">
+                                    <div class="col-sm-4 johncena">
+                                        
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <h5 style="text-align: center; margin-top: 25px;">oh also i made u a playlist</h5>
+                                        <a href="https://open.spotify.com/playlist/7u6wHde7kG2pLxhW7bt9IH?si=55c4dcfe760c4514"><img class="imggg link" style="margin-top:20px;" src="https://i.pinimg.com/564x/5f/a9/9c/5fa99c197aae862f7d871892e158fd5d.jpg" alt="1"></a>
+                                    </div>
+                                    <div class="col-sm-4 johncena">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+</body>
+</html>
